@@ -18,7 +18,7 @@ def downloadbar(alreadLenth,totalLenth,speed):
 		print("　",end="")
 	print("}",end="")
 	print(speed,end="")
-	print("KB/S         ",end="")#多加空格防止下一行没有吧上一行覆盖掉导致速度显示异常
+	print("KB/S         ",end="")#多加空格防止下一行没有把上一行覆盖掉导致速度显示异常
 
 def download(URL):
 	already_download=0
