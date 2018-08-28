@@ -21,10 +21,14 @@ def main():
         path = '/media/daiqiang/DATA'
     if  path == 'default windows':
         path = 'D:/'
-    myname = socket.getfqdn(socket.gethostname())
-    ip=socket.gethostbyname(myname)
+    if input("Iput ip by hand? y/n \n")=='n':
+        myname = socket.getfqdn(socket.gethostname())
+        ip=socket.gethostbyname(myname)
+        
+    else:
+        ip=input()
     authorizer = DummyAuthorizer()
-
+    
     # Define a new user having full r/w permissions and a read-only
     # anonymous user
     # authorizer.add_user('daiqiang', '12345', '.', perm='elradfmwM')
